@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.apache.tomcat</groupId>
+    <artifactId>tomcat-encrypted</artifactId>
+    <version>1.0.0.Final</version>
+    <name>Tomact-Encrypted</name>
+    
+    <properties>
+        <tomcat.version>9.0.19</tomcat.version>
+        <maven.compiler.source>1.7</maven.compiler.source>
+        <maven.compiler.target>1.7</maven.compiler.target>
+    </properties>
+    <pluginRepositories>
+       <pluginRepository>
+         <id>central</id>
+         <name>Central Repository</name>
+         <url>https://repo.maven.apache.org/maven2</url>
+         <layout>default</layout>
+         <snapshots>
+           <enabled>false</enabled>
+         </snapshots>
+         <releases>
+           <updatePolicy>never</updatePolicy>
+         </releases>
+       </pluginRepository>
+     </pluginRepositories>
+     <repositories>
+       <repository>
+         <id>central</id>
+         <name>Central Repository</name>
+         <url>https://repo.maven.apache.org/maven2</url>
+         <layout>default</layout>
+         <snapshots>
+           <enabled>false</enabled>
+         </snapshots>
+       </repository>
+     </repositories>
+    <dependencies>
+       <dependency>
+         <groupId>org.apache.tomcat</groupId>
+         <artifactId>tomcat-jdbc</artifactId>
+         <version>10.0.6</version>
+      </dependency>
+    </dependencies>
+    <description>Java que realiza la encryptacion y desencriptacion de las password de JDBC de Apache</description>
+  <build>
+    <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <configuration>
+            <archive>
+              <manifest>
+                <mainClass>org.apache.tomcat.EncDecJDBCPass</mainClass>
+              </manifest>
+            </archive>
+          </configuration>
+        </plugin>
+    </plugins>
+  </build>
+</project>
