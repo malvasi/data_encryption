@@ -1,4 +1,4 @@
-package org.apache.tomcat;
+package com.dm.cryptographic;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -27,7 +27,7 @@ public class EncDecJDBCPass {
 
   private static final String ALGORITHM = "AES";
 
-  private static final String defaultSecretKey = "Prueba";
+  private static final String defaultSecretKey = "test";
 
   private Key secretKeySpec;
 
